@@ -1,59 +1,49 @@
-# App
+# Angular Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
+This project is a dashboard application built using Angular. It provides various features, including expense management, chart visualizations, and a responsive UI. The app demonstrates best practices in Angular development, including lazy loading, reactive forms, and efficient data handling.
 
-## Development server
+## Installation and Setup
 
-To start a local development server, run:
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+2. **Install project dependencies**:
+   `` bash
+   Copy code
+   npm install
 
-```bash
-ng serve
-```
+3. **Install json-server globally (if not already installed)**:
+   ``bash
+   Copy code
+   npm install -g json-server
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Scripts
 
-## Code scaffolding
+### npm start: Runs both the Angular app and the JSON server simultaneously.
+### npm run build: Builds the Angular project for production.
+### npm run test: Runs unit tests.
+### npm run lint: Runs the linter to check code quality.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+![image](https://github.com/user-attachments/assets/99515acd-d1b2-4085-8f31-c61428871c88)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
+## Features
 
-## Building
+### Components
+- **Header**: Includes a dark mode toggle for switching themes.
+- **Sidebar**: Navigation menu with links to:
+  - Dashboard
+  - Expense List
+  - Add Expense
+- **Dashboard**: Visual charts for expense trends and distribution by category.
+- **Expense List**: Displays expenses with sorting and pagination functionality.
+- **Add/Edit Expense Form**: Form for managing expenses.
+![image](https://github.com/user-attachments/assets/414c189e-1fea-4a08-8b93-00d9a4012858)
 
-To build the project run:
+---
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

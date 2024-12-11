@@ -1,0 +1,94 @@
+/* Expense Form Styling */
+.expense-form-section {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: inherit;
+  color: inherit;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.form-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.input-group,
+.p-calendar,
+.p-selectButton {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="number"],
+.p-calendar {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background: inherit;
+  color: inherit;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: #e7e7e7;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #ddd;
+  color: #8c8c8c;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:enabled {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .expense-form-section {
+    padding: 15px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+}

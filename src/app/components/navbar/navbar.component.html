@@ -1,0 +1,17 @@
+<nav [class]="sideBarOpen ? 'sidebar' : 'sidebar-close sidebar'">
+  <button
+    [class]="sideBarOpen ? 'menu_button' : 'menu_button center'"
+    (click)="toggleSideBar()"
+  >
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div class="navLinks">
+    <ng-container *ngFor="let linkItem of navItems">
+      <div routerLink="/{{ linkItem.link }}" class="navItem">
+        <i class=" {{ linkItem.icon }} icon"></i>
+        <span [class]="sideBarOpen ? '' : 'hide'"> {{ linkItem.item }}</span>
+      </div>
+    </ng-container>
+  </div>
+</nav>

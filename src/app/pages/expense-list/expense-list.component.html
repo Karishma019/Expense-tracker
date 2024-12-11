@@ -1,0 +1,87 @@
+<app-loading [isLoading]="loading"></app-loading>
+
+<p-table
+  #table
+  [value]="expenses"
+  [paginator]="true"
+  [rows]="10"
+  [rowsPerPageOptions]="[5, 10, 15]"
+  [responsiveLayout]="'scroll'"
+  [globalFilterFields]="['description', 'category', 'type']"
+  class="custom-table"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="background-color: #bdc5c8; color: #333">ID</th>
+      <th style="background-color: #bdc5c8; color: #333">Description</th>
+      <th
+        style="background-color: #bdc5c8; color: #333"
+        pSortableColumn="amount"
+      >
+        Amount
+        <p-sortIcon
+          style="background-color: #bdc5c8; color: #333"
+          field="amount"
+        ></p-sortIcon>
+      </th>
+      <th style="background-color: #bdc5c8; color: #333">Category</th>
+      <th style="background-color: #bdc5c8; color: #333">Date</th>
+      <th style="background-color: #bdc5c8; color: #333" pSortableColumn="type">
+        Type
+        <p-sortIcon
+          style="background-color: #bdc5c8; color: #333"
+          field="type"
+        ></p-sortIcon>
+      </th>
+      <th style="background-color: #bdc5c8; color: #333">Actions</th>
+    </tr>
+    <tr>
+      <th style="background-color: #bdc5c8; color: #333" colspan="7">
+        <input
+          pInputText="p-input-text"
+          type="text"
+          (input)="filterTable($event, table)"
+          placeholder="Search By Category, Type, Description...."
+        />
+      </th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-expense let-i="rowIndex">
+    <tr style="background-color: inherit; color: inherit">
+      <td>{{ i + 1 }}</td>
+      <td>{{ expense.description | titlecase }}</td>
+      <td>{{ expense.amount | currency }}</td>
+      <td>{{ expense.category | titlecase }}</td>
+      <td>{{ expense.date | date : "dd.MM.yyyy" }}</td>
+      <td>
+        <span
+          [ngClass]="{
+            'income-type': expense.type === 'income',
+            'expense-type': expense.type === 'expense'
+          }"
+        >
+          {{ expense.type | titlecase }}
+        </span>
+      </td>
+      <td class="btn-container">
+        <button
+          pButton
+          type="button"
+          class="btn btn-success"
+          (click)="onEdit(expense)"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <button
+          pButton
+          type="button"
+          class="btn btn-danger"
+          (click)="onDelete(expense.id)"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

@@ -1,0 +1,108 @@
+<section class="expense-form-section">
+  <app-loading [isLoading]="loading"></app-loading>
+
+  <p class="form-heading">{{ editMode ? "Edit Expense" : "Add Expense" }}</p>
+  <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()" class="expense-form">
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input
+        type="text"
+        id="description"
+        formControlName="description"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          expenseForm.get('description')?.invalid &&
+          expenseForm.get('description')?.touched
+        "
+        class="error-message"
+      >
+        Description is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <input
+        type="text"
+        id="category"
+        formControlName="category"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          expenseForm.get('category')?.invalid &&
+          expenseForm.get('category')?.touched
+        "
+        class="error-message"
+      >
+        Category is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <p-calendar
+        formControlName="date"
+        [iconDisplay]="'input'"
+        [showIcon]="true"
+        inputId="icondisplay"
+        class="form-control"
+      ></p-calendar>
+      <div
+        *ngIf="
+          expenseForm.get('date')?.hasError('futureDate') &&
+          expenseForm.get('date')?.touched
+        "
+        class="error-message"
+      >
+        Date must not be a future date.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <p-selectButton
+        [options]="stateOptions"
+        formControlName="type"
+        optionLabel="label"
+        optionValue="value"
+        class="form-control"
+      ></p-selectButton>
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input
+        type="number"
+        id="amount"
+        formControlName="amount"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          expenseForm.get('amount')?.invalid &&
+          expenseForm.get('amount')?.touched
+        "
+        class="error-message"
+      >
+        Amount is required
+      </div>
+      <div
+        *ngIf="expenseForm.get('amount')?.hasError('greaterThanZero')"
+        class="error-message"
+      >
+        Invalid Amount
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="submit-button"
+      [disabled]="expenseForm.invalid"
+    >
+      {{ editMode ? "Edit Expense" : "Add Expense" }}
+    </button>
+  </form>
+</section>

@@ -1,0 +1,85 @@
+/* General Table Styles */
+.custom-table {
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.custom-table thead th {
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Row Styles */
+.custom-table tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Buttons */
+.p-button-sm {
+  margin-right: 5px;
+}
+
+/* Type-Specific Colors */
+.income-type {
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.expense-type {
+  color: red;
+  font-weight: bold;
+}
+
+/* Style for the search input */
+.custom-table input[type="text"] {
+  width: 50%;
+  margin: 10px 0; /* Optional: Adds some margin to space it out */
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect for the search input */
+.custom-table input[type="text"]:focus {
+  outline: none;
+  border-color: #007ad9;
+  box-shadow: 0 0 5px rgba(0, 122, 217, 0.3);
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.3rem;
+  color: aliceblue;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background: #3b82f6;
+}
+
+.btn-danger {
+  background: red;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.p-paginator-bottom .p-paginator .p-component {
+  background: inherit;
+  color: inherit;
+}

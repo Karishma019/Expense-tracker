@@ -1,0 +1,89 @@
+<div class="dashboard-container">
+  <div class="dashboard-summary">
+    <!-- Total Income -->
+    <div class="summary-card income-card">
+      <h3>Total Income</h3>
+      <p>{{ totalIncome | currency }}</p>
+      <span [ngClass]="incomePercentage >= 0 ? 'positive' : 'negative'">
+        {{ incomePercentage.toFixed(2) }}%
+        <i
+          class="arrow"
+          [class.arrow-up]="incomePercentage >= 0"
+          [class.arrow-down]="incomePercentage < 0"
+        ></i>
+      </span>
+    </div>
+
+    <!-- Total Expense -->
+    <div class="summary-card expense-card">
+      <h3>Total Expense</h3>
+      <p>{{ totalExpense | currency }}</p>
+      <span [ngClass]="expensePercentage >= 0 ? 'positive' : 'negative'">
+        {{ expensePercentage.toFixed(2) }}%
+        <i
+          class="arrow"
+          [class.arrow-up]="expensePercentage >= 0"
+          [class.arrow-down]="expensePercentage < 0"
+        ></i>
+      </span>
+    </div>
+
+    <!-- Total Savings -->
+    <div class="summary-card savings-card">
+      <h3>Total Savings</h3>
+      <p>{{ totalSavings | currency }}</p>
+      <span [ngClass]="totalSavings >= 0 ? 'positive' : 'negative'">
+        {{ totalSavings >= 0 ? "+" : "" }}{{ totalSavings | currency }}
+        <i
+          class="arrow"
+          [class.arrow-up]="totalSavings >= 0"
+          [class.arrow-down]="totalSavings < 0"
+        ></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Bar Chart -->
+    <div class="chart-container">
+      <h3>Comparison of Total Income and Expenses</h3>
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="true"
+        [type]="'bar'"
+      >
+      </canvas>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="chart-container">
+      <h3>Proportion of Income and Expenses</h3>
+      <canvas
+        baseChart
+        [datasets]="pieChartData"
+        [labels]="pieChartLabels"
+        [options]="pieChartOptions"
+        [legend]="true"
+        [type]="'pie'"
+      >
+      </canvas>
+    </div>
+  </div>
+
+  <!-- Line Chart -->
+  <div class="chart-container single">
+    <h3>Income and Expenses Trend Over Time</h3>
+    <canvas
+      baseChart
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [legend]="true"
+      [type]="'line'"
+    >
+    </canvas>
+  </div>
+</div>

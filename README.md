@@ -9,12 +9,12 @@ This project is a dashboard application built using Angular. It provides various
    git clone <repository-url>
    cd <repository-folder>
 2. **Install project dependencies**:
-   `` bash
+   ``` bash
    Copy code
    npm install
 
 3. **Install json-server globally (if not already installed)**:
-   ``bash
+   ```bash
    Copy code
    npm install -g json-server
 
@@ -26,6 +26,8 @@ This project is a dashboard application built using Angular. It provides various
 ### npm run lint: Runs the linter to check code quality.
 
 ---
+
+![image](https://github.com/user-attachments/assets/414c189e-1fea-4a08-8b93-00d9a4012858)
 
 ![image](https://github.com/user-attachments/assets/99515acd-d1b2-4085-8f31-c61428871c88)
 
@@ -41,7 +43,6 @@ This project is a dashboard application built using Angular. It provides various
 - **Dashboard**: Visual charts for expense trends and distribution by category.
 - **Expense List**: Displays expenses with sorting and pagination functionality.
 - **Add/Edit Expense Form**: Form for managing expenses.
-![image](https://github.com/user-attachments/assets/414c189e-1fea-4a08-8b93-00d9a4012858)
 
 ---
 ## License

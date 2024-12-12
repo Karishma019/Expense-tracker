@@ -40,21 +40,12 @@ export class DashboardComponent {
     {
       data: [],
       label: 'Income',
-      backgroundColor: ['#2196f3', '#ec4899', '#b6ea9e', '#4caf50', '#66d8e2'],
+      // backgroundColor: ['#2196f3'],
     },
     {
       data: [],
       label: 'Expense',
-      backgroundColor: [
-        '#ff8c8c',
-        '#66d8e2',
-        '#4caf50',
-        '#b9ba11',
-        '#b9ba11',
-        '#eaff00',
-        '#eab99e',
-        '#e69eea',
-      ],
+      // backgroundColor: ['#ff8c8c'],
     },
   ];
 

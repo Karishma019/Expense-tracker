@@ -86,4 +86,17 @@
     >
     </canvas>
   </div>
+
+  <div class="chart-container single">
+    <h3>Income and Expenses Trend Over Time</h3>
+    <canvas
+      baseChart
+      [datasets]="doughnutChartData"
+      [labels]="doughnutChartLabels"
+      [options]="doughChartOption"
+      [legend]="true"
+      [type]="'doughnut'"
+    >
+    </canvas>
+  </div>
 </div>

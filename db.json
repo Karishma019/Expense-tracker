@@ -95,6 +95,102 @@
       "category": "refund",
       "type": "income",
       "date": "2024-12-23T08:30:00.000Z"
+    },
+    {
+      "description": "Temple Donation",
+      "amount": 5000000,
+      "category": "religion",
+      "type": "expense",
+      "date": "2024-12-09T18:30:00.000Z",
+      "id": "9584"
+    },
+    {
+      "id": "a301",
+      "description": "Salary",
+      "amount": 800000,
+      "category": "salary",
+      "type": "income",
+      "date": "2024-11-18T09:00:00.000Z"
+    },
+    {
+      "id": "e567",
+      "description": "Food",
+      "amount": 1500,
+      "category": "grocery",
+      "type": "expense",
+      "date": "2024-10-18T14:00:00.000Z"
+    },
+    {
+      "id": "b124",
+      "description": "Electricity Bill",
+      "amount": 3000,
+      "category": "utilities",
+      "type": "expense",
+      "date": "2024-09-19T12:00:00.000Z"
+    },
+    {
+      "id": "f890",
+      "description": "Rent Payment",
+      "amount": 20000,
+      "category": "housing",
+      "type": "expense",
+      "date": "2024-08-19T16:00:00.000Z"
+    },
+    {
+      "id": "d321",
+      "description": "Investment Returns",
+      "amount": 12000000,
+      "category": "investment",
+      "type": "income",
+      "date": "2024-07-20T10:00:00.000Z"
+    },
+    {
+      "id": "c12d",
+      "description": "Health Insurance",
+      "amount": 8000,
+      "category": "health",
+      "type": "expense",
+      "date": "2024-06-20T11:00:00.000Z"
+    },
+    {
+      "id": "f4e8",
+      "description": "Freelance Income",
+      "amount": 100000,
+      "category": "freelance",
+      "type": "income",
+      "date": "2023-12-21T08:00:00.000Z"
+    },
+    {
+      "id": "b679",
+      "description": "Transport",
+      "amount": 5000,
+      "category": "transport",
+      "type": "expense",
+      "date": "2023-11-21T13:00:00.000Z"
+    },
+    {
+      "id": "a89f",
+      "description": "Gift Received",
+      "amount": 20000,
+      "category": "gifts",
+      "type": "income",
+      "date": "2023-10-22T09:30:00.000Z"
+    },
+    {
+      "id": "ac21",
+      "description": "Charity Donation",
+      "amount": 100000,
+      "category": "charity",
+      "type": "expense",
+      "date": "2023-09-22T15:00:00.000Z"
+    },
+    {
+      "id": "da40",
+      "description": "Refund",
+      "amount": 15000,
+      "category": "refund",
+      "type": "income",
+      "date": "2023-08-23T08:30:00.000Z"
     }
   ]
 }

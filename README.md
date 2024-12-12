@@ -18,12 +18,11 @@ This project is a dashboard application built using Angular. It provides various
    Copy code
    npm install -g json-server
 
-## Scripts
-
-### npm start: Runs both the Angular app and the JSON server simultaneously.
-### npm run build: Builds the Angular project for production.
-### npm run test: Runs unit tests.
-### npm run lint: Runs the linter to check code quality.
+4. **Runs both the Angular app and the JSON server simultaneously**:
+   ```bash
+   Copy code
+   npm start
+   
 
 ---
 

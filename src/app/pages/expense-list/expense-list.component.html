@@ -45,6 +45,14 @@
         />
       </th>
     </tr>
+    <tr *ngIf="expenses.length == 0">
+      <th
+        style="background-color: #bdc5c8; color: #333; text-align: center"
+        colspan="7"
+      >
+        No Data Found
+      </th>
+    </tr>
   </ng-template>
 
   <ng-template pTemplate="body" let-expense let-i="rowIndex">

@@ -50,15 +50,26 @@
         inputId="icondisplay"
         class="form-control"
       ></p-calendar>
-      <div
+      <ng-container
         *ngIf="
-          expenseForm.get('date')?.hasError('futureDate') &&
-          expenseForm.get('date')?.touched
+          expenseForm.get('date')?.invalid && expenseForm.get('date')?.touched;
+          else dateValid
         "
-        class="error-message"
       >
-        Date must not be a future date.
-      </div>
+        <p class="error-message">date is required</p>
+      </ng-container>
+
+      <ng-template #dateValid>
+        <p
+          *ngIf="
+            expenseForm.get('date')?.hasError('futureDate') &&
+            expenseForm.get('date')?.touched
+          "
+          class="error-message"
+        >
+          Date must not be a future date.
+        </p>
+      </ng-template>
     </div>
 
     <div class="form-group">
@@ -80,21 +91,25 @@
         formControlName="amount"
         class="form-control"
       />
-      <div
+      <ng-container
         *ngIf="
           expenseForm.get('amount')?.invalid &&
-          expenseForm.get('amount')?.touched
+            expenseForm.get('amount')?.touched && !expenseForm.controls['amount'].errors?.['greaterThanZero'];
+          else amountValid
         "
-        class="error-message"
       >
-        Amount is required
-      </div>
-      <div
-        *ngIf="expenseForm.get('amount')?.hasError('greaterThanZero')"
-        class="error-message"
-      >
-        Invalid Amount
-      </div>
+        <p class="error-message">Amount is required</p>
+      </ng-container>
+
+      <ng-template #amountValid>
+        <p
+          *ngIf="
+            expenseForm.controls['amount'].errors?.['greaterThanZero']&& expenseForm.get('amount')?.touched"
+          class="error-message"
+        >
+          Invalid Amount
+        </p>
+      </ng-template>
     </div>
 
     <button

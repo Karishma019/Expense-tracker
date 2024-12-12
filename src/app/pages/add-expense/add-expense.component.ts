@@ -69,9 +69,8 @@ export class AddExpenseComponent implements OnInit {
         type: data.type || '',
         date: data.date || '',
       });
-
-      console.log(this.expenseForm.value, this.editMode);
     }
+    console.log(this.expenseForm.value, this.editMode, this.expenseForm);
   }
 
   futureDateValidator(control: AbstractControl): ValidationErrors | null {
@@ -80,14 +79,8 @@ export class AddExpenseComponent implements OnInit {
     return selectedDate < today ? null : { futureDate: true };
   }
 
-  greaterThanZeroValidator() {
-    return (control: AbstractControl): ValidationErrors | null => {
-      const value = control.value;
-      if (value <= 0) {
-        return { greaterThanZero: true };
-      }
-      return null;
-    };
+  greaterThanZeroValidator(control: AbstractControl): ValidationErrors | null {
+    return control.value > 0 ? null : { greaterThanZero: true };
   }
 
   onSubmit() {

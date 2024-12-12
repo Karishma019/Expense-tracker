@@ -18,11 +18,12 @@ This project is a dashboard application built using Angular. It provides various
    Copy code
    npm install -g json-server
 
-## Scripts
+4. **Runs both the Angular app and the JSON server simultaneously**:
+   ```bash
+   Copy code
+   npm start
+   
 
- **Runs both the Angular app and the JSON server simultaneously**.
- ```bash
-npm start
 ---
 
 ![image](https://github.com/user-attachments/assets/414c189e-1fea-4a08-8b93-00d9a4012858)
